@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekkor - Cabinet de Recrutement d'Excellence</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ekkor, cabinet de recrutement spécialisé dans les secteurs Tertiaire, BTP, Logistique et Industrie. Paiement au succès, accompagnement personnalisé.">
+    <meta name="keywords" content="recrutement, cabinet recrutement, RH, emploi, BTP, logistique, industrie, tertiaire">
+    <meta name="author" content="Ekkor">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self'; frame-src https://www.google.com;">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ekkor - Cabinet de Recrutement d'Excellence">
+    <meta property="og:description" content="Votre partenaire recrutement spécialisé. Paiement au succès uniquement.">
+    <meta property="og:url" content="https://ekkor.fr">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <style>
+        :root {
+            --ekkor-green: #16C784;
+            --ekkor-light-green: #2DD697;
+            --ekkor-anthracite: #1A1D26;
+            --ekkor-light: #FAF8F5;
+            --ekkor-beige: #E8E3DB;
+            --white: #FFFFFF;
+            --gray-600: #6B7280;
+            --gray-700: #374151;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Instrument Sans', -apple-system, sans-serif;
+            color: var(--ekkor-anthracite);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .header.scrolled {
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--ekkor-anthracite);
+            letter-spacing: -0.02em;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ekkor-anthracite);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--ekkor-green);
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-links a:hover {
+            color: var(--ekkor-green);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--ekkor-green) !important;
+            color: var(--white) !important;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta::after {
+            display: none !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--ekkor-light-green) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(22, 199, 132, 0.3);
+        }
+        
+        .cta-button {
+            padding: 0.875rem 2rem;
+            background: var(--ekkor-green);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .cta-button:hover {
+            background: var(--ekkor-light-green);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(22, 199, 132, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--ekkor-anthracite) 0%, #2A2E38 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(22, 199, 132, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(45, 214, 151, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(22, 199, 132, 0.15);
+            border: 1px solid rgba(22, 199, 132, 0.3);
+            border-radius: 50px;
+            color: var(--ekkor-light-green);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.35rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        .stat-item {
+            text-align: left;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--ekkor-green);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+            height: 600px;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(22, 199, 132, 0.2) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+            transition: transform 0.8s ease;
+        }
+        
+        .hero-image-wrapper:hover img {
+            transform: scale(1);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 8rem 0;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            animation: fadeInUp 1s ease-out both;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            color: var(--ekkor-green);
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 3.5rem;
+            color: var(--ekkor-anthracite);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-description {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Values Section */
+        .values-section {
+            background: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+        
+        .value-card {
+            background: var(--ekkor-light);
+            padding: 3rem;
+            border-radius: 25px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 1s ease-out both;
+        }
+        
+        .value-card:nth-child(1) { animation-delay: 0.1s; }
+        .value-card:nth-child(2) { animation-delay: 0.2s; }
+        .value-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            background: var(--white);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--ekkor-green), var(--ekkor-light-green));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            transition: transform 0.4s ease;
+        }
+        
+        .value-card:hover .value-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+        
+        .value-icon i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+        
+        .value-card h3 {
+            font-size: 1.75rem;
+            color: var(--ekkor-anthracite);
+            margin-bottom: 1rem;
+        }
+        
+        .value-card p {
+            color: var(--gray-600);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: linear-gradient(135deg, var(--ekkor-beige) 0%, var(--ekkor-light) 100%);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            height: 650px;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            animation: fadeInLeft 1s ease-out both;
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .about-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26, 29, 38, 0.3) 0%, transparent 50%);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-content {
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .about-content .section-badge {
+            text-align: left;
+            display: block;
+        }
+        
+        .about-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .about-content > p {
+            font-size: 1.15rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features-list {
+            margin: 2.5rem 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--ekkor-green);
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4px;
+        }
+        
+        .feature-icon i {
+            color: var(--white);
+            font-size: 0.75rem;
+        }
+        
+        .feature-content h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Instrument Sans', sans-serif;
+            font-weight: 700;
+        }
+        
+        .feature-content p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        
+        /* Sectors Section */
+        .sectors-section {
+            background: var(--white);
+        }
+        
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .sector-card {
+            position: relative;
+            height: 450px;
+            border-radius: 25px;
+            overflow: hidden;
+            cursor: pointer;
+            animation: fadeInUp 1s ease-out both;
+        }
+        
+        .sector-card:nth-child(1) { animation-delay: 0.1s; }
+        .sector-card:nth-child(2) { animation-delay: 0.2s; }
+        .sector-card:nth-child(3) { animation-delay: 0.3s; }
+        .sector-card:nth-child(4) { animation-delay: 0.4s; }
+        
+        .sector-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .sector-card:hover .sector-image {
+            transform: scale(1.1);
+        }
+        
+        .sector-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26, 29, 38, 0.95) 0%, transparent 60%);
+            z-index: 1;
+        }
+        
+        .sector-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 3rem;
+            z-index: 2;
+        }
+        
+        .sector-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .sector-icon i {
+            font-size: 1.75rem;
+            color: var(--white);
+        }
+        
+        .sector-card h3 {
+            font-size: 2.25rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .sector-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* Services Section */
+        .services-section {
+            background: var(--ekkor-light);
+        }
+        
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+            animation: fadeInUp 1s ease-out both;
+            max-width: 500px;
+        }
+        
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--ekkor-green), var(--ekkor-light-green));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .service-icon i {
+            font-size: 1.75rem;
+            color: var(--white);
+        }
+        
+        .service-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .service-card > p {
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .service-features {
+            list-style: none;
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .service-features i {
+            color: var(--ekkor-green);
+            font-size: 1rem;
+        }
+        
+        /* Methodology */
+        .methodology {
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 30px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .methodology h3 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+        }
+        
+        .step-item {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 85px;
+            height: 85px;
+            background: var(--ekkor-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+            transition: all 0.4s ease;
+        }
+        
+        .step-item:hover .step-number {
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(22, 199, 132, 0.4);
+        }
+        
+        .step-item h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            font-family: 'Instrument Sans', sans-serif;
+            font-weight: 700;
+        }
+        
+        .step-item p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(135deg, #F5F1E8 0%, #E8E3DB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-section .section-badge {
+            color: var(--ekkor-green);
+        }
+        
+        .pricing-section .section-title {
+            color: var(--ekkor-anthracite);
+        }
+        
+        .pricing-simple {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .pricing-badge {
+            background: linear-gradient(135deg, var(--ekkor-green), var(--ekkor-light-green));
+            padding: 4rem 6rem;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(22, 199, 132, 0.25);
+            transition: all 0.4s ease;
+        }
+        
+        .pricing-badge:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 35px 80px rgba(22, 199, 132, 0.35);
+        }
+        
+        .pricing-from {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        .pricing-percentage {
+            display: block;
+            color: var(--white);
+            font-size: 5rem;
+            font-weight: 800;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-detail {
+            display: block;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        .contact-section {
+            background: var(--white);
+            padding: 8rem 0;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .contact-image {
+            height: 100%;
+            min-height: 600px;
+            border-radius: 25px;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .contact-form {
+            background: var(--ekkor-light);
+            padding: 4rem;
+            border-radius: 30px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--ekkor-anthracite);
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 1rem;
+            background: var(--white);
+            transition: all 0.3s ease;
+            color: var(--ekkor-anthracite);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--ekkor-green);
+            box-shadow: 0 0 0 4px rgba(22, 199, 132, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .captcha-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .captcha-note {
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            font-style: italic;
+            text-align: center;
+            margin: 0;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 1.25rem 2rem;
+            background: var(--ekkor-green);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Instrument Sans', sans-serif;
+        }
+        
+        .submit-button:hover {
+            background: var(--ekkor-light-green);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(22, 199, 132, 0.3);
+        }
+        
+        
+        /* Footer */
+        .footer {
+            background: var(--ekkor-anthracite);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .footer-column h4 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Instrument Sans', sans-serif;
+            font-weight: 700;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background: var(--ekkor-green);
+            transform: translateY(-3px);
+        }
+        
+        .footer-info {
+            list-style: none;
+        }
+        
+        .footer-info li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+        
+        .footer-info i {
+            color: var(--ekkor-green);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+        
+        .footer-info a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-info a:hover {
+            color: var(--ekkor-green);
+        }
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom p {
+            margin: 0;
+        }
+        
+        .footer-legal {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-legal a:hover {
+            color: var(--ekkor-green);
+        }
+        
+        .footer-legal .separator {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Scroll Animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container,
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .values-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sectors-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .form-row,
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-image {
+                min-height: 400px;
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .pricing-badge {
+                padding: 3rem 4rem;
+            }
+            
+            .pricing-percentage {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">Ekkor</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#secteurs">Nos secteurs</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact" class="nav-cta">Contactez-nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Connecter les talents aux opportunités</h1>
+                <p class="hero-subtitle">
+                    Cabinet de recrutement spécialisé dans les secteurs Tertiaire, BTP, Logistique et Industrie. 
+                    Votre partenaire stratégique pour construire les équipes de demain.
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Taux de satisfaction</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Accompagnement personnalisé</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+100</div>
+                        <div class="stat-label">Recrutements réussis</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200" 
+                         alt="Partenariat professionnel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nos valeurs</span>
+                <h2 class="section-title">Ce qui nous définit</h2>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Transparence</h3>
+                    <p>Une communication claire et honnête à chaque étape du processus de recrutement, pour une collaboration en toute confiance.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Respect des délais</h3>
+                    <p>Nous nous engageons à respecter vos échéances avec rigueur et professionnalisme pour répondre à vos besoins urgents.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Partenariat durable</h3>
+                    <p>Au-delà d'une simple prestation, nous construisons une relation de confiance sur le long terme avec nos clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="apropos">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200" 
+                         alt="Consultation professionnelle - Cabinet Ekkor">
+                </div>
+                
+                <div class="about-content">
+                    <span class="section-badge">À propos d'Ekkor</span>
+                    <h2>Votre partenaire recrutement de confiance</h2>
+                    <p>
+                        Ekkor est un cabinet de recrutement à taille humaine spécialisé dans quatre secteurs clés : 
+                        Tertiaire, BTP, Logistique et Industrie. Notre mission est d'accompagner les entreprises 
+                        dans la construction de leurs équipes de demain.
+                    </p>
+                    <p>
+                        Nous croyons fermement que le recrutement est bien plus qu'une simple mise en relation. 
+                        C'est un investissement stratégique qui nécessite expertise, écoute et compréhension 
+                        approfondie de vos enjeux métiers.
+                    </p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Expertise sectorielle</h4>
+                                <p>Une connaissance approfondie des métiers et des enjeux de chaque secteur</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Approche personnalisée</h4>
+                                <p>Chaque client est unique, nos solutions s'adaptent à vos besoins spécifiques</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Agilité et réactivité</h4>
+                                <p>Une taille humaine qui nous permet d'être réactifs et flexibles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section class="sectors-section" id="secteurs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nos secteurs</span>
+                <h2 class="section-title">4 expertises au service de votre croissance</h2>
+                <p class="section-description">
+                    Une connaissance approfondie des métiers et des enjeux spécifiques à chaque secteur d'activité
+                </p>
+            </div>
+            
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <img class="sector-image" 
+                         src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200" 
+                         alt="Tertiaire">
+                    <div class="sector-overlay"></div>
+                    <div class="sector-content">
+                        <div class="sector-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Tertiaire</h3>
+                        <p>
+                            Recrutement de profils administratifs, commerciaux, RH, finance et management 
+                            pour accompagner votre développement.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="sector-card">
+                    <img class="sector-image" 
+                         src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200" 
+                         alt="BTP">
+                    <div class="sector-overlay"></div>
+                    <div class="sector-content">
+                        <div class="sector-icon">
+                            <i class="fas fa-helmet-safety"></i>
+                        </div>
+                        <h3>BTP</h3>
+                        <p>
+                            Expertise dans le recrutement de conducteurs de travaux, ingénieurs, 
+                            chefs de chantier et techniciens qualifiés.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="sector-card">
+                    <img class="sector-image" 
+                         src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=1200" 
+                         alt="Logistique">
+                    <div class="sector-overlay"></div>
+                    <div class="sector-content">
+                        <div class="sector-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Logistique</h3>
+                        <p>
+                            Recrutement de responsables logistiques, préparateurs de commandes, 
+                            caristes et gestionnaires de stocks.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="sector-card">
+                    <img class="sector-image" 
+                         src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200" 
+                         alt="Industrie">
+                    <div class="sector-overlay"></div>
+                    <div class="sector-content">
+                        <div class="sector-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrie</h3>
+                        <p>
+                            Sourcing de techniciens de maintenance, opérateurs, ingénieurs 
+                            et responsables de production qualifiés.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="methodology">
+                <h3>Notre méthodologie en 5 étapes</h3>
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4>Analyse</h4>
+                        <p>Compréhension approfondie de vos besoins</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4>Sourcing</h4>
+                        <p>Recherche active des meilleurs profils</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4>Sélection</h4>
+                        <p>Évaluation rigoureuse des candidats</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h4>Présentation</h4>
+                        <p>Shortlist de candidats qualifiés</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <h4>Suivi</h4>
+                        <p>Accompagnement post-intégration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Contact</span>
+                <h2 class="section-title">Vous avez un projet de recrutement ?</h2>
+                <p class="section-description">
+                    Notre équipe est à votre écoute pour échanger sur vos besoins et vous proposer des solutions sur mesure.
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-layout">
+                    <div class="contact-image">
+                        <img src="contact-image.png" 
+                             alt="Contactez l'équipe Ekkor">
+                    </div>
+                    
+                    <form class="contact-form" name="contact" method="POST" action="/success.html" data-netlify="true" data-netlify-recaptcha="true">
+                    <!-- Honeypot anti-spam -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div style="display: none;">
+                        <label>Ne pas remplir: <input name="bot-field" /></label>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="entreprise">Entreprise *</label>
+                        <input type="text" id="entreprise" name="entreprise" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="secteur">Secteur d'activité *</label>
+                        <select id="secteur" name="secteur" required>
+                            <option value="">Sélectionnez un secteur</option>
+                            <option value="tertiaire">Tertiaire</option>
+                            <option value="btp">BTP</option>
+                            <option value="logistique">Logistique</option>
+                            <option value="industrie">Industrie</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea id="message" name="message" required placeholder="Décrivez-nous votre besoin en recrutement..."></textarea>
+                    </div>
+                    
+                    <div class="form-group captcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                        <p class="captcha-note">Note : Cette clé est une clé de test. Remplacez-la par votre propre clé reCAPTCHA.</p>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        Envoyer votre demande
+                    </button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Infos Pratiques</h4>
+                <ul class="footer-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Paris, Bordeaux, Lyon
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="/cdn-cgi/l/email-protection#e5868a8b91848691a5848e8e8a97cb8397"><span class="__cf_email__" data-cfemail="bcdfd3d2c8dddfc8fcd9d7d7d3ce92dace">[email&#160;protected]</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Ekkor.fr Fait avec passion.</p>
+            <div class="footer-legal">
+                <a href="#mentions-legales">Mentions Légales</a>
+                <span class="separator">|</span>
+                <a href="#cookies">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bandeau Cookies RGPD -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>🍪 Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="#cookies">politique de cookies</a>.</p>
+            <div class="cookie-buttons">
+                <button onclick="acceptCookies()" class="cookie-accept">Accepter</button>
+                <button onclick="refuseCookies()" class="cookie-refuse">Refuser</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--ekkor-anthracite);
+            color: white;
+            padding: 1.5rem;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-content p {
+            margin: 0;
+            flex: 1;
+        }
+        
+        .cookie-content a {
+            color: var(--ekkor-green);
+            text-decoration: underline;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .cookie-accept, .cookie-refuse {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cookie-accept {
+            background: var(--ekkor-green);
+            color: white;
+        }
+        
+        .cookie-accept:hover {
+            background: var(--ekkor-light-green);
+        }
+        
+        .cookie-refuse {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .cookie-refuse:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <script>
+        // Gestion du bandeau cookies (RGPD)
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookie-banner').style.display = 'none';
+            // Activer les cookies analytics si nécessaire
+            // gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+        
+        function refuseCookies() {
+            localStorage.setItem('cookieConsent', 'refused');
+            document.getElementById('cookie-banner').style.display = 'none';
+            // Désactiver les cookies analytics
+            // gtag('consent', 'update', { analytics_storage: 'denied' });
+        }
+        
+        // Vérifier le consentement au chargement
+        window.addEventListener('load', checkCookieConsent);
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+        
+         
