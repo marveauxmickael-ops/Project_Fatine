@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message envoyé - Ekkor</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --akkor-green: #16C784;
+            --akkor-light-green: #2DD697;
+            --ekkor-anthracite: #1A1D26;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Instrument Sans', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #F5F1E8 0%, #E8E3DB 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .success-container {
+            background: var(--white);
+            padding: 4rem 3rem;
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--akkor-green), var(--akkor-light-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease-out 0.3s both;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .success-icon svg {
+            width: 50px;
+            height: 50px;
+            stroke: var(--white);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+        
+        .checkmark {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: drawCheck 0.5s ease-out 0.8s forwards;
+        }
+        
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--ekkor-anthracite);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--akkor-green);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+        
+        .email-info {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--akkor-green);
+        }
+        
+        .email-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #6B7280;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--akkor-green), var(--akkor-light-green));
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(22, 199, 132, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--ekkor-anthracite);
+            border: 2px solid var(--ekkor-anthracite);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--ekkor-anthracite);
+            color: var(--white);
+        }
+        
+        .contact-info {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #E5E7EB;
+        }
+        
+        .contact-info p {
+            font-size: 0.9rem;
+            color: #6B7280;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info a {
+            color: var(--akkor-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .success-container {
+                padding: 3rem 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <svg viewBox="0 0 52 52">
+                <path class="checkmark" d="M14 27l8 8 16-16"/>
+            </svg>
+        </div>
+        
+        <h1>Message envoyé avec succès !</h1>
+        <p class="subtitle">Merci pour votre confiance</p>
+        
+        <p>
+            Votre demande a bien été transmise à notre équipe. 
+            Nous avons pris connaissance de votre projet et nous vous recontacterons 
+            dans les plus brefs délais.
+        </p>
+        
+        <div class="email-info">
+            <p>
+                📧 Un email de confirmation vous a été envoyé à l'adresse que vous avez indiquée. 
+                Pensez à vérifier vos courriers indésirables si vous ne le recevez pas.
+            </p>
+        </div>
+        
+        <p>
+            <strong>Délai de réponse habituel :</strong> 24 à 48 heures ouvrées
+        </p>
+        
+        <div class="buttons">
+            <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+            <a href="/#secteurs" class="btn btn-secondary">Découvrir nos secteurs</a>
+        </div>
+        
+        <div class="contact-info">
+            <p>Une question urgente ?</p>
+            <p>Contactez-nous directement : <a href="mailto:fmarveaux@akkor.fr">fmarveaux@ekkor.fr</a></p>
+        </div>
+    </div>
+</body>
+</html>

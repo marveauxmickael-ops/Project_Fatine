@@ -1,0 +1,26 @@
+# robots.txt pour Ekkor
+
+User-agent: *
+Allow: /
+
+# Bloquer les pages non indexables
+Disallow: /mentions-legales.html
+Disallow: /cookies.html
+Disallow: /_redirects
+Disallow: /netlify.toml
+
+# Sitemap (à créer plus tard)
+Sitemap: https://ekkor.fr/sitemap.xml
+
+# Bloquer les mauvais bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 10

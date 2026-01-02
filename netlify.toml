@@ -1,0 +1,80 @@
+# Configuration Netlify pour Ekkor
+
+[build]
+  publish = "."
+  
+# Configuration du formulaire de contact
+[build.environment]
+  NODE_VERSION = "18"
+
+# Headers de sécurité
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prévention du clickjacking
+    X-Frame-Options = "DENY"
+    
+    # Protection XSS
+    X-XSS-Protection = "1; mode=block"
+    
+    # Prévention du MIME sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # Politique de référent
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Permissions strictes
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    
+    # HSTS (HTTPS strict)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # Content Security Policy (adapté à vos besoins)
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://cdnjs.cloudflare.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+      img-src 'self' https: data:;
+      connect-src 'self';
+      frame-src https://www.google.com;
+      base-uri 'self';
+      form-action 'self';
+    """
+
+# Cache control pour les assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirections
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/mentions-legales.html"
+  status = 200
+
+[[redirects]]
+  from = "/cookies"
+  to = "/cookies.html"
+  status = 200
+
+# Page 404 personnalisée
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Configuration reCAPTCHA (variables d'environnement à configurer dans Netlify UI)
+# RECAPTCHA_SITE_KEY = votre_cle_publique
+# RECAPTCHA_SECRET_KEY = votre_cle_secrete

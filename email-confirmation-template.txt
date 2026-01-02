@@ -1,0 +1,46 @@
+Bonjour {{nom}} {{prenom}},
+
+Nous avons bien reçu votre demande de contact et nous vous en remercions.
+
+📋 RÉCAPITULATIF DE VOTRE DEMANDE
+
+Nom: {{nom}}
+Prénom: {{prenom}}
+Email: {{email}}
+Entreprise: {{entreprise}}
+Secteur: {{secteur}}
+
+Votre message:
+{{message}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ PROCHAINES ÉTAPES
+
+Notre équipe va étudier votre demande avec attention et vous recontactera 
+dans les 24 à 48 heures ouvrées.
+
+Si votre demande est urgente, n'hésitez pas à nous contacter directement :
+📧 Email: fmarveaux@ekkor.fr
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+À PROPOS D'EKKOR
+
+Ekkor est votre partenaire recrutement spécialisé dans les secteurs:
+• Tertiaire
+• BTP
+• Logistique  
+• Industrie
+
+🌐 Site web: https://ekkor.fr
+📧 Email: fmarveaux@ekkor.fr
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cordialement,
+L'équipe Ekkor
+
+---
+Cet email est envoyé automatiquement, merci de ne pas y répondre.
+Pour toute question, contactez-nous à fmarveaux@ekkor.fr

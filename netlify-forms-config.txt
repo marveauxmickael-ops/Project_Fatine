@@ -1,0 +1,31 @@
+# CONFIGURATION NETLIFY FORMS - EKKOR
+
+## Formulaire détecté automatiquement
+Nom: contact
+Attributs: data-netlify="true" data-netlify-recaptcha="true"
+
+## Configuration notification email
+
+1. Dans Netlify Dashboard:
+   - Forms → contact → Form notifications
+   - Add notification → Email notification
+   
+2. Paramètres:
+   Email to notify: fmarveaux@ekkor.fr
+   Event: New form submission
+   
+3. Format email reçu:
+   - Nom / Prénom
+   - Email
+   - Entreprise
+   - Secteur
+   - Message complet
+
+## Protection anti-spam activée
+✅ reCAPTCHA v2
+✅ Honeypot field
+✅ Netlify spam filter
+
+## Limites
+- Plan gratuit: 100 soumissions/mois
+- Notifications: illimitées
