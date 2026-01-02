@@ -42,12 +42,12 @@
 
 ## 📧 CONFIGURATION EMAIL (10 MINUTES)
 
-### Email à vous (fmarveaux@akkor.fr)
+### Email à vous (fmarveaux@ekkor.fr)
 
 **Déjà configuré ✅**
 1. Dans Netlify → Forms → Form notifications
 2. Add notification → Email
-3. Email: fmarveaux@akkor.fr
+3. Email: fmarveaux@ekkor.fr
 
 ### Email à l'utilisateur (confirmation automatique)
 
@@ -69,7 +69,7 @@ Guide détaillé fourni séparément.
 2. Clic "Envoyer"
 3. Redirection vers success.html (animation ✨)
 4. Email de confirmation reçu automatiquement
-5. Vous recevez le message sur fmarveaux@akkor.fr
+5. Vous recevez le message sur fmarveaux@ekkor.fr
 
 ---
 
